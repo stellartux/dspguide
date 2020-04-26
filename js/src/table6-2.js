@@ -1,6 +1,6 @@
 /**
  * http://www.dspguide.com/ch6/3.htm
- * Chapter 6, Table 6-1
+ * Chapter 6, Table 6-2
  * CONVOLUTION USING THE OUTPUT SIDE ALGORITHM
  * @param {(number[]|TypedArray)} input sample buffer
  * @param {(number[]|TypedArray)} impulseResponse
