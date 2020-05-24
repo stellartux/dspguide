@@ -2,15 +2,14 @@
  * http://www.dspguide.com/ch8/9.htm
  * Chapter 8, Table 8-4
  * PHASE UNWRAPPING
- * @param {number[]} real
- * @param {number[]} imaginary
- * @returns {Object} result
- * @returns {number[]} result.magnitude
- * @returns {number[]} result.phase
+ * @param {number[]|Float32Array|Float64Array} phase
+ * @returns {number[]|Float32Array|Float64Array} unwrapped phase values
  **/
-function phaseUnwrapping(phase) {
+export function phaseUnwrapping(phase) {
+  const InputType = Object.getPrototypeOf(phase).constructor
+
   // holds the unwrapped phase
-  const unwrapped = new Array(phase.length)
+  const unwrapped = new InputType(phase.length)
 
   const tau = 2 * Math.PI
 
